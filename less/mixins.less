@@ -1,1 +1,31 @@
 // Mixins Here
+
+.center() {
+	display: flex;
+	justify-content: center;
+    flex-direction:row;
+  }
+ .fontStyle() {
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+ }
+
+  //parametric mixin
+
+  .design(@background-color; @color; @padding) {
+    background-color: @background-color;
+    color: @color;
+    padding: @padding;
+ }
+
+ .design2(@radius; @width; @size) {
+    border-radius: @radius;
+    width: @width;
+    font-size: @size;
+}
+
+.animation(@arguments) {
+    -webkit-transform: @arguments;
+    -ms-transform: @arguments;
+     transform : @arguments;
+}
